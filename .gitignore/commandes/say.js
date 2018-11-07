@@ -13,8 +13,8 @@ module.exports.run = async (bot, message, args) => {
         .addField(`Texte`,`"${botmessage}"`)
         .setColor("0wFF8000")
         .setTimestamp()
-        .setFooter(`KokaBot | Exécuté par  ${message.author.tag}`,"http://kokazia.tk/app/webroot/img/uploads/icon-server/Logo.png")
-    message.guild.channels.get('505732469312716814').send(saylog)
+        .setFooter(`SkyBot | Exécuté par  ${message.author.tag}`)
+    message.guild.channels.get('509737142398877697').send(saylog)
 
 }
 
