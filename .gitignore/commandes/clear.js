@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
         .addField(`Messages Supprimés`,`${args[0]}`)
         .setColor("0wFF8000")
         .setTimestamp(new Date())
-        .setFooter(`KokaBot | Exécuté par  ${message.author.tag}`,"http://kokazia.tk/app/webroot/img/uploads/icon-server/Logo.png")
+        .setFooter(`KokaBot | Exécuté par  ${message.author.tag}`,"https://cdn.discordapp.com/icons/488094402947055647/049024a47a53c3a99d0dff94deb711d5.webp")
     message.guild.channels.get('505732469312716814').send(clearlog)   
     }); 
 }
