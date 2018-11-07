@@ -4,16 +4,10 @@ const prefixe = require('./prefix.json')
 const prefix = prefixe.prefix
 const fs = require("fs");
 Bot.commandes = new Discord.Collection();
-
-function changing_status() {
-  let status = ['!help | V.1.0.0', 'https://kokazia.tk', `${Bot.users.size} Membres`]
-  let random = status[Math.floor(Math.random() * status.length)]
   Bot.user.setActivity(random)
-}
 
 Bot.on("ready", () => {
-  console.log(`${Bot.user.username} est en ligne sur ${Bot.guilds.size} serveurs Number of Users : ${Bot.users.size}`);
-  setInterval(changing_status, 2500);
+  Bot.user.setActivity("!help")
 })
 
 /* */
@@ -36,14 +30,12 @@ fs.readdir("./commandes/", (err, files) => {
       let wysixjs = require(`./commandes/wysix.js`);
       let kickjs = require(`./commandes/kick.js`);
       let banjs = require(`./commandes/ban.js`);
-      let ticketjs = require(`./commandes/ticket.js`);
       console.log(`File ${f} is fully loaded!`);
       Bot.commandes.set(helpjs.help.name, helpjs);
       Bot.commandes.set(clearjs.clear.name, clearjs);
       Bot.commandes.set(sayjs.say.name, sayjs);
       Bot.commandes.set(kickjs.kick.name, kickjs);
       Bot.commandes.set(banjs.ban.name, banjs);
-      Bot.commandes.set(ticketjs.new.name, ticketjs);
     });
   });
 
