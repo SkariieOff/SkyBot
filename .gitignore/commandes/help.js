@@ -13,7 +13,7 @@ module.exports.run = (bot, message, args) => {
           .addField(`${px}kick <mention user> <texte>`,"Pour expulser un membre du serveur Discord.")
           .addField(`${px}ban <mention user> <texte>`,"Pour bannir un membre du serveur Discord.")
           .setColor("0wFF8000")
-          .setFooter(`KokaBot | Requête de ${message.author.tag}`,"http://kokazia.tk/app/webroot/img/uploads/icon-server/Logo.png")
+          .setFooter(`KokaBot | Requête de ${message.author.tag}`,"https://cdn.discordapp.com/icons/488094402947055647/049024a47a53c3a99d0dff94deb711d5.webp")
       //if(!args[0]) message.guild.channels.get('505733432027119626').send(help)
       if(!args[0]) message.author.send(help)
       message.delete()
